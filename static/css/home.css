@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Roboto&display=swap');
+
+section.main{
+    height: 500px;
+    padding-top: 6rem;
+    background-color: #009F93;
+    z-index: 0;
+    overflow: hidden;
+    box-shadow: inset 0px -20px 30px rgb(0,0,0,0.15);
+}
+#home-title{
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-70%);
+    text-align: center;
+    font-size: 40px;
+    width: 40%;
+    margin: auto;
+    z-index: 1;
+}
+section.articles{
+    background-color:white;
+}
+
+section.articles > div.body{
+    margin: auto;
+    padding-top: 2rem;
+}
+h1.section-title{
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+h1.section-title::before{
+    content: '';
+    height: 5px;
+    width: 100px;
+    position: absolute;
+    background-color: white;
+    margin-top: 50px;;
+}
+h1.section-title.black::before{
+    background-color: black;
+}
+
+/* BLOG BODY */
+.blog_body{
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+}
+.blog_body h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.blog_body p{
+    font-family: 'Roboto', sans-serif;
+    text-indent: 1rem;
+}
+.blog_body .row{
+    margin-bottom: 2rem;
+}
+div.int-lists ul{
+    list-style: square;
+    margin-top: 0px;
+}
+div.int-lists ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+    transition: 0.1s ease-out;
+
+}
+div.int-lists ul li a:hover{
+    text-decoration: none;
+    color:  #009F93;
+    background-color: #03312E;
+    font-weight: 600;
+    transition: 0.1s ease-in;
+}
+
+@media screen and (max-width: 1500px){
+    div.row{
+        justify-content: normal !important;
+        display: block !important;
+        margin-bottom: 0px !important;
+    }
+    div.row div.col{
+        max-width: none !important;
+        margin-bottom: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    #home-title{
+        font-size: 25px !important;
+        z-index: 0;
+    }
+    section.main{
+        height: 300px;
+        z-index: 0;
+    }
+    .section-title{
+        margin-left: 5%;
+    }
+
+    .blog_body{
+        width: 90%;
+    }
+}

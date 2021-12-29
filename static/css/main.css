@@ -62,6 +62,7 @@ div.blog-navbar ul{
     padding: 0;
     list-style: none;
     display: flex;
+    font-family: 'Poppins', sans-serif;
 }
 
 div.blog-navbar ul li a{

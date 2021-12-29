@@ -50,7 +50,7 @@ h1.section-title.black::before{
     margin: auto;
     margin-top: 3rem;
 }
-.blog_body h4{
+.blog_body h2{
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -79,6 +79,44 @@ div.int-lists ul li a:hover{
     background-color: #03312E;
     font-weight: 600;
     transition: 0.1s ease-in;
+}
+
+/* All about code */
+div.coder {
+    box-shadow: 0px 10px 20px grey;
+    border-radius: 20px;
+    border-top: 2rem;
+    border-bottom: 2rem;
+}
+div.coder > pre {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+code.coder.language-python {
+    background-color: #2E3440;
+    color: #D8DEE9;
+    border-radius: 20px;
+    border-bottom: 20px;
+}
+span.hljs-keyword {
+    color: #5E81AC;
+}
+span.hljs-title.function_,
+span.hljs-title.class_{
+    color: #88C0D0;
+}
+span.hljs-built_in{
+    color: #D08770;
+}
+
+span.hljs-params > span.hljs-type{
+    color: #8FBCBB;
+}
+span.hljs-string{
+    color: #EBCB8B
+}
+span.hljs-deletion, span.hljs-number, span.hljs-quote, span.hljs-literal {
+    color: #B48EAD;
 }
 
 @media screen and (max-width: 1500px){
@@ -110,4 +148,46 @@ div.int-lists ul li a:hover{
     .blog_body{
         width: 90%;
     }
+}
+
+
+/*==================*/
+/* Article BODY */
+/*==================*/
+
+#article-body > h2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid grey;
+    padding-bottom: 2rem;
+}
+
+#article-body > div.coder {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+div.bubble-card.article-header{
+    height: 200px;
+    width: 100%;
+    transition: 0.3s ease-out;
+}
+div.bubble-card.article-header:hover{
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.25);
+    transition: 0.1s ease-in;
+    transform: translateY(-5px);
+    background-color: whitesmoke;
+}
+div.article-header > div.header{
+    position: relative;
+    height: 60%;
+    padding-top: 20px;
+}
+div.article-header > div.content{
+    position: relative;
+    height: 40%;
+    display: grid;
+}
+div.article-header > div.content > span.date{
+    color: gray;
 }

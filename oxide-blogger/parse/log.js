@@ -33,18 +33,10 @@ export function parse( content ) {
 	const unorderedSubList = /^\s\s\s*[\*|\+|\-]\s.*$/;
 	const orderedList = /^\d\.\s.*$/;
 	const orderedSubList = /^\s\s+\d\.\s.*$/;
-    const code = /(?=`{3}python).*(?<=`{3})/gms;
+    const code = /^(`{3}|\s{4}).*/gm;
 	const paragraph = /^\w.*/gm
 
 	var title = '';
-
-	// Example: Paragraphs
-	if(paragraph.test(content)) {
-		var paragraphs = content.match(paragraph);
-		paragraphs.forEach(el => {
-			content = content.replace(el, "<p>"+ el +"</p>")
-		})
-	}
 
 	// Example: # Heading 1
 	if( h1.test( content ) ) {
@@ -189,30 +181,58 @@ export function parse( content ) {
 		} );
 	}
 
+	// Code snippets: ```python```
     if( code.test(content) ) {
-        var codeSnippets = content.match(code);
-        var plainCodeRe = /(?<=`{3}python).*(?=`{3})/gms;
 
-        var coderDiv = document.createElement("div");
-        var preBlock = document.createElement("pre");
-        var codeLanguageBlock = document.createElement("code");
-        coderDiv.classList.value = "coder";
-        codeLanguageBlock.classList.value = "language-python coder"
-        coderDiv.appendChild(preBlock);
-        preBlock.appendChild(codeLanguageBlock);
+		// Create the div, pre, and code elements;
+		var divElement = document.createElement("div");
+		var preElement = document.createElement("pre");
+		var codeElement = document.createElement("code");
+		divElement.classList.value = "coder";
+		codeElement.classList.value = "language-python coder"
+		divElement.appendChild(preElement);
+		preElement.appendChild(codeElement);
 
-        codeSnippets.forEach( element => {
-            var codeLines = element.match(plainCodeRe);
-            codeLanguageBlock.textContent = codeLines;
-            var codeBlock = `
-<div class="coder">
-    ${coderDiv.innerHTML}
-</div>
-            `
-            content = content.replace(element, codeBlock);
-        })
-    }
+		for(const chunk of content.split(/`{3}/gm)){
 
+			// If the chunk does not contain pyhton its not a code snippet
+			if(!chunk.startsWith('python')){
+				continue
+			}
+
+			// To be replaced in the content
+			var code_chunk = chunk.replace('python', '```python');
+			code_chunk += '```';
+
+			// Add the python code lines to the code element
+			var codeLines = chunk.replace('python', '');
+			codeElement.textContent = codeLines + "\n";
+
+			// Replace the code block in the content
+			content = content.replace(code_chunk, divElement.outerHTML);
+		}
+	}
+
+	// Paragraphs
+	for(const paragraph of content.match(/.+?\n\n/gs)){
+		if(paragraph.startsWith('<') || paragraph.startsWith(' ') || paragraph.startsWith('\n')){
+			continue
+		}
+		content = content.replace(paragraph, `<p>${paragraph}</p>`)
+	}
+
+	// Code text snippets
+	const codeTextSnippet = /`\w.*`/gm
+	if(codeTextSnippet.test(content)){
+		var elements = content.match(codeTextSnippet);
+		elements.forEach(word => {
+			var spanElement = document.createElement('span');
+			spanElement.classList += 'snipp';
+			spanElement.textContent = word.replaceAll('`','');
+
+			content = content.replace(word, spanElement.outerHTML);
+		})
+	}
 
     return [content, title]
 }

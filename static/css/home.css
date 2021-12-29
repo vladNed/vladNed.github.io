@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap');
 
 section.main{
     height: 500px;
@@ -46,17 +46,17 @@ h1.section-title.black::before{
 
 /* BLOG BODY */
 .blog_body{
-    width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 3rem;
 }
 .blog_body h2{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Merriweather', serif;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 .blog_body p{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-indent: 1rem;
 }
 .blog_body .row{
@@ -167,6 +167,14 @@ span.hljs-deletion, span.hljs-number, span.hljs-quote, span.hljs-literal {
     margin-bottom: 3rem;
 }
 
+span.snipp{
+    background-color: #E5E9F0;
+    color: #5E81AC;
+    font-size: 14;
+    padding: 2px;
+    border-radius: 5px;
+}
+
 div.bubble-card.article-header{
     height: 200px;
     width: 100%;
@@ -182,6 +190,9 @@ div.article-header > div.header{
     position: relative;
     height: 60%;
     padding-top: 20px;
+}
+div.article-header > div.header > h2{
+    font-size: 24px;
 }
 div.article-header > div.content{
     position: relative;

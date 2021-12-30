@@ -17,7 +17,7 @@ div.flag-point{
 }
 a.flag{
     font-family: 'Rubik', sans-serif;
-    color: #03312E;
+    color: #88C0D0;
     font-size: 25px;
     position: relative;
     top: 25%;
@@ -26,14 +26,12 @@ a.flag{
 
 }
 a.flag:hover{
-    color: #03312E;
+    color: #B48EAD;
     text-decoration: none;
-    background-color: white;
-    border-radius: 20px;
     transition: 0.2s ease-in;
 }
 div.blog-navbar.black a.flag{
-    color: #02C3BD;
+    color: #88C0D0;
 }
 /* Logo end */
 
@@ -55,7 +53,7 @@ div.blog-navbar{
 
 }
 div.blog-navbar.black{
-    background-color: #03312E;
+    background-color: #2E3440;
 }
 div.blog-navbar ul{
     margin: 0px 6rem 0px 0px;
@@ -66,16 +64,17 @@ div.blog-navbar ul{
 }
 
 div.blog-navbar ul li a{
-    color: #03312E;
+    color: #88C0D0;
     font-weight: bold;
     display: block;
     margin-right: 30px;
     text-decoration: none;
     font-size: 18px;
+    transition: 0.2s ease-in;
 }
 div.blog-navbar ul li a::before{
     display: inline-block;
-    background-color: #03312E;
+    background-color: #EBCB8B;
     height: 3px;
     width: 0px;
     position: absolute;
@@ -87,9 +86,12 @@ div.blog-navbar ul li a::before{
 div.blog-navbar ul li a:hover::before{
     width: 50px;
 }
+div.blog-navbar ul li a:hover{
+    color: #EBCB8B
+}
 div.blog-navbar.black ul li a{
     color: white;
-    font-weight: normal;
+    transition: 0.2s ease-in;
 }
 div.blog-navbar.black ul li a::before{
     background-color: white;
@@ -112,7 +114,7 @@ div.blog-navbar.black ul li a::before{
     margin: 10px;
     height: 100%;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgb(0,0,0,0.10);
+    box-shadow: 0px 0px 20px #D8DEE9;
     padding: 30px;
 }
 
@@ -199,12 +201,12 @@ section.footer li{
     a.flag{
         top: 20%;
         font-size: 20px;
-        color: #02C3BD;
+        color: #88C0D0;
     }
     .blog-navbar {
       min-height: 60px;
       height: 2rem !important;
-      background-color: #03312E;
+      background-color: #2E3440;
     }
     .blog-navbar ul {
       position: absolute;
@@ -214,7 +216,7 @@ section.footer li{
       top: 60px;
       flex-direction: column;
       align-items: center;
-      background-color: #03312eef;
+      background-color: #2e3440ef;
       ;
       max-height: 0;
       overflow: hidden;
@@ -231,6 +233,7 @@ section.footer li{
     }
     .blog-navbar ul li a:hover {
       background-color: rgba(255,255,255,.1);
+      color: #EBCB8B;
     }
     .blog-navbar ul.open {
       max-height: 16rem;

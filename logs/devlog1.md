@@ -1,14 +1,17 @@
 # DevLog #1: Calculating the number of seconds until midnight
 
-## Disclaimer
+## 0. Disclaimer
 
 This is an old article that I once wrote on DEV.to and since I want to start my own blog I'll review it and add it to my new blog.
 
-## Introduction
+## 1. Introduction
 
 I know this might be very straight forward for some developers but I found this
 a pretty intriguing and fun quick problem to solve, it also might help some beginners furthermore.
 How can you find the number of seconds until midnight ?....with python...in an elegant way.
+
+## 2. Code
+
 My first approach to this was to subtract from the 24 hours the number of hours
 that passed today, and so multiply with 60 to get the number of seconds.
 

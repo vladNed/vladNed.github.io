@@ -1,9 +1,8 @@
 /**
  * Fetches the query parameters from the url and parses them as an object
- *
  * @returns object
  */
-export function processCargoManifest() {
+ export function processCargoManifest() {
     var manifest = location.search
         .replaceAll("?", "")
         .replaceAll("%20", " ");
@@ -17,17 +16,3 @@ export function processCargoManifest() {
 
     return cargo_values;
 }
-
-/**
- * From the parsed query params it will replace all the values in the html body.
- *
- */
-export function insertCargoValues() {
-    var cargo = processCargoManifest();
-    var pageContent = document.body.innerHTML;
-    Object.entries(cargo).forEach(([template, value]) => {
-        pageContent = pageContent.replace(`{{${template}}}`, value);
-    })
-    document.body.innerHTML = pageContent;
-}
-

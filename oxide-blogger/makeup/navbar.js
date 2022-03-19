@@ -1,4 +1,3 @@
-
 /**
  * Add black background to navbar
  */

@@ -1,4 +1,4 @@
-# DevLod #2: March 2022 Update
+# DevLog #2: March 2022 Update
 
 ## 1. Intro
 
@@ -39,13 +39,9 @@ idle that I could fall asleep in just 2s.
 Not actually discovering MySpace...but more like discovering that I can actually
 control my interaction with others in a productive way.
 
-- Rejecting calls, huddles and meeting if I don't feel that my input is necessary
-or if I feel like my energy levels are low.
-- Taking notes at the start and end of meeting so we/I can have a clear conclusion
-about what we discussed (this was not my idea but I liked it so I introduced it
-in my routine)
-- Taking breaks more frequently and giving myself some space so I can also
-process information.
+- Rejecting calls, huddles and meeting if I don't feel that my input is necessary or if I feel like my energy levels are low.
+- Taking notes at the start and end of meeting so we/I can have a clear conclusion about what we discussed (this was not my idea but I liked it so I introduced it in my routine)
+- Taking breaks more frequently and giving myself some space so I can also process information.
 
 This kinda set a limit on how I want to actually treat myself and my mind. The
 productivity grew exponentially. Now my colleague and I work in parallel on

@@ -49,6 +49,7 @@ h1.section-title.black::before{
     width: 50%;
     margin: auto;
     margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 .blog_body h2{
     font-family: 'Merriweather', serif;

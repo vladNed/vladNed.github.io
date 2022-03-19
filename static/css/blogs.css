@@ -5,6 +5,7 @@
     }
     section.blog_body > div.row {
         width: 100%;
+        margin-top: 3rem !important;
     }
 }
 
@@ -12,5 +13,12 @@
     div.bubble-card.article-header {
         padding-bottom: 60px;
         height: 300px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    section.blog_body div.row {
+        width: 100%;
+        margin-top: 3rem !important;
     }
 }

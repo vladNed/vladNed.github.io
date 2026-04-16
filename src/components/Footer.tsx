@@ -8,6 +8,9 @@ export function Footer() {
           <a href="https://github.com/vladNed" target="_blank" rel="noopener noreferrer">
             [GitHub]
           </a>
+          <a href="https://x.com/nedelcuvd" target="_blank" rel="noopener noreferrer">
+            [X]
+          </a>
         </div>
       </div>
     </footer>

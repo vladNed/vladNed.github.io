@@ -4,13 +4,6 @@ import { TerminalWindow } from './TerminalWindow';
 
 const projects = [
   {
-    name: 'SafeFiles',
-    url: 'https://safefiles.app',
-    icon: 'https://safefiles.app/logo-main.png',
-    description:
-      'A WeTransfer alternative that\'s simple & privacy first. Peer-to-peer file sharing directly between browsers with end-to-end encryption and no server storage.',
-  },
-  {
     name: 'fastapi-endpoints',
     url: 'https://vladned.github.io/fastapi-endpoints/',
     icon: 'https://vladned.github.io/fastapi-endpoints/assets/logo-black.png',

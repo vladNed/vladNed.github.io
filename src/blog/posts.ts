@@ -78,7 +78,6 @@ I'm **vladNed** — a software engineer who likes building things that are simpl
 
 A couple of projects I've launched recently:
 
-- **[SafeFiles](https://safefiles.app)** — A privacy-first file sharing tool. Think WeTransfer, but peer-to-peer with end-to-end encryption. No servers storing your files. Your browser talks directly to the other browser.
 - **[fastapi-endpoints](https://vladned.github.io/fastapi-endpoints/)** — A file-based router for FastAPI. Drop your route files into a directory structure and it wires everything up automatically. Less boilerplate, more building.
 
 ## Why a blog?
